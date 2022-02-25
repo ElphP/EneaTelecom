@@ -3,89 +3,317 @@
     padding: 0px;
     box-sizing: border-box;
 }
-body{
-    background-color: #44546A;
+body {
+    background-color: #44546a;
 }
-nav{
-    background-color: #F9D990;
+nav {
+    background-color: #f8e9a4;
     font-family: "Roboto";
     font-size: 1.6rem;
-    height:80px;
+    height: 80px;
     width: 100vw;
     display: flex;
     justify-content: space-between;
     position: sticky;
     align-items: center;
     padding-right: 200px;
-    padding-left: 50px;
-    color: #44546A;
+    padding-left: 100px;
+    color: #44546a;
+}
+
+.logo {
+    width: 200px;
 }
 
 .onglets {
-    display:flex;
-flex-direction: row;
+    display: flex;
+    flex-direction: row;
+    padding-top: 20px;
 }
-section  {
+
+section {
     width: auto;
     position: relative;
 }
 
-
-
-ul{
+.ssmenu {
     display: flex;
-    list-style: none; 
-    flex-direction: column; 
+    list-style: none;
+    flex-direction: column;
     position: absolute;
     width: 100%;
-    padding: 10px 0px 10px 0px, ;
-    margin:10px 0px 0px 0px;
-   visibility: hidden;
+    margin-top: 2px;
+    opacity: 0;
+    transition: all 2s;
+    font-size: 1.3rem;
 }
 
 section:hover:nth-child(3) ul {
-    visibility: visible;
+    opacity: 1;
+    transition: all 1s;
 }
 
+section:hover:nth-child(1) ul {
+    opacity: 1;
+    transition: all 1s;
+}
 
 a {
     text-decoration: none;
-    color: #44546A;
-     padding: 10px 20px;
-     margin: 5px;  
+    color: #44546a;
+    padding: 10px 15px;
+    margin: 5px;
+    font-weight: bolder;
+    /* text-shadow: 2px 2px 6px  rgb(197, 220, 231); */
 }
 
-li{
-    padding: 5px 5px; 
-    background-color: #F9D990;
+li {
+    padding: 10px 5px;
+    background-color: white;
     text-align: center;
-    border: 1px solid white;  
+    border: 2px solid #f8e9a4;
 }
 
-li:last-child  {
+li:last-child {
     border-top: none;
 }
 
 li:hover {
-    background-color: #fffd6d;
+    background-color: rgb(197, 220, 231);
 }
 
 .o1 {
-    border: 3px solid #44546A ;
+    border: 2px solid #44546a;
     border-radius: 5px;
 }
 .o2 {
-    border: 3px solid  #F9D990 ;
-    border-radius: 5px; 
+    border: 2px solid #f8e9a4;
+    border-radius: 5px;
 }
 
+.burger {
+    display: none;
+}
 
+.navbar_lien {
+    display: none;
+}
 
 section:hover {
-  background-color: #fffd6d;
-  border-radius: 5px;
-  cursor: pointer;
+    background-color: rgb(197, 220, 231);
+    border-radius: 5px;
+    cursor: pointer;
+}
+.presentation {
+    padding: 80px 10px 0px 10px;
 }
 
+.presaccueil {
+    margin: auto;
+    padding: 10px;
+    font-size: 2.2rem;
+    color: whitesmoke;
+    width: 90%;
+}
 
+.nom {
+    color: #f8e9a4;
+    font-family: "Libre Baskerville";
+    font-weight: bold;
+}
 
+.animation {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    font-size: 2.2rem;
+    color: whitesmoke;
+    font-family: "Libre Baskerville";
+    justify-content: center;
+    width: 300px;
+    align-content: center;
+    margin: auto;
+    transform: scale(0.75);
+    animation: scale 6s forwards cubic-bezier(0.5, 1, 0.89, 1);
+}
+@keyframes scale {
+    100% {
+        transform: scale(1);
+    }
+}
+.anim {
+    padding: 10px;
+    opacity: 0;
+    filter: blur(4px);
+}
+
+.anim:nth-child(1) {
+    animation: fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+.anim:nth-child(2) {
+    animation: fade-in 0.8s 0.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+.anim:nth-child(3) {
+    animation: fade-in 0.8s 0.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+.anim:nth-child(4) {
+    animation: fade-in 0.8s 0.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    padding-bottom: 30px;
+}
+
+.presaccueil2  {
+     margin: auto;
+    padding-top: 40px;
+    font-size: 2.2rem;
+    color: whitesmoke;
+    width: 90%;
+    text-align: center;
+}
+
+hr {
+    width: 80%;
+    margin: auto;
+}
+
+.trypt  {
+    display: flex;
+    justify-content: space-around;
+    margin: 30px;
+}
+
+.encadr  {
+    border: 1px solid white;
+    width:350px;
+    padding: 30px;
+    color: whitesmoke;
+    margin: 10px;
+}
+
+h2 {
+    font-family: "Libre Baskerville";
+    font-size: 2rem;
+    text-align: center;
+}
+
+.text  {
+    font-family: "Roboto";
+    font-size: 1.8rem;
+    text-align: justify;
+}
+
+@keyframes fade-in {
+    100% {
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+
+@media screen and (max-width: 1500px) and (min-width: 1200px) {
+    nav {
+        padding-right: 50px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    section {
+        display: none;
+    }
+
+    nav {
+        padding-left: 15%;
+    }
+
+    .burger {
+        display: block;
+        position: relative;
+        margin-left: 70%;
+        width: 45px;
+        height: 35px;
+        border: none;
+        cursor: pointer;
+        background-color: transparent;
+        align-content: center;
+    }
+
+    .bar {
+        display: block;
+        width: 28px;
+        height: 4px;
+        left: 0px;
+        background-color: black;
+        border-radius: 3px;
+        transition: background-color 0.5s ease-in-out;
+    }
+    .appnav .bar {
+        width: 0;
+        background: transparent;
+    }
+
+    .bar::before,
+    .bar::after {
+        content: "";
+        width: 28px;
+        height: 4px;
+        left: 0px;
+        align-content: center;
+        background-color: black;
+        border-radius: 3px;
+        position: absolute;
+        transition: transform 0.5s ease-in-out;
+    }
+    .bar::before {
+        transform: translateY(-8px);
+    }
+    .bar::after {
+        transform: translateY(8px);
+    }
+
+    .appnav .bar::before {
+        transform: rotate(-45deg);
+    }
+
+    .appnav .bar::after {
+        transform: rotate(45deg);
+    }
+    /* onglets de navigation */
+    .navbar_lien {
+        display: none;
+        opacity: 0;
+        transition: all 2s;
+    }
+
+    .navbar_lien.appnav2 {
+        display: block;
+        opacity: 1;
+        position: relative;
+        width: 100%;
+        transition: all 2s;
+    }
+
+    .navbar_lien.appnav2 a {
+        text-decoration: none;
+    }
+
+    .navlien {
+        text-align: left;
+        padding-left: 15%;
+        font-family: "Roboto", Helvetica, Arial, sans-serif;
+        font-size: 1.5rem;
+        padding-top: 18px;
+        line-height: 45px;
+        padding-bottom: 18px;
+        background-color: white;
+        border: 1px solid#f8e9a4;
+    }
+    
+    .trypt {
+        flex-direction: column;
+    }
+
+    .encadr  {
+        width: auto;
+    }
+}

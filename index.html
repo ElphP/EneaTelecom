@@ -9,33 +9,74 @@
 
         <link
             href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap"
-            rel="stylesheet" type='text/css'
+            rel="stylesheet"
+            type="text/css"
         />
         <link
             href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Roboto+Slab&display=swap"
-            rel="stylesheet" type='text/css'
+            rel="stylesheet"
+            type="text/css"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     </head>
     <body>
-
         <nav>
-            <label for="">ENEA Telecom</label>
+            <img class="logo" src="enea.png" alt="logo_enea" />
+            <button class="burger">
+                <span class="bar"></span>
+            </button>
             <div class="onglets">
-                
-                <section class="o1"><a href="index.html">Accueil</a></section>
-                <section class="o2"><a href="offres.html">Nos offres</a></section>
-                <section class="o2"><a href="realis.html">Nos réalisations</a>
-                    <ul>
-                        <li> <a href="realis.html">Cote d'Ivoire</a></li>
-                        <li> <a href="realis.html">Burkina Faso</a></li>
+                <section class="o1">
+                    <a href="index.html">Notre société</a>
+                    <ul class="ssmenu">
+                        <li><a href="index.html">Présentation</a></li>
+                        <li><a href="index.html">Notre équipe</a></li>
                     </ul>
-                  </section> 
-                <section class="o2"><a href="contact.html">Contact</a></section>
-                
-                </div>
-            
+                </section>
+                <section class="o2">
+                    <a href="offres.html">Nos offres</a>
+                </section>
+                <section class="o2">
+                    <a href="realis.html">Nos réalisations</a>
+                    <ul class="ssmenu">
+                        <li><a href="realis.html">Cote d'Ivoire</a></li>
+                        <li><a href="realis.html">Burkina Faso</a></li>
+                    </ul>
+                </section>
+                <section class="o2">
+                    <a href="contact.html">Nous contacter</a>
+                </section>
+            </div>
         </nav>
-
+        <ul class="navbar_lien">
+            <li class="navlien"><a href="index.html">Notre société</a></li>
+            <li class="navlien"><a href="offres.html">Nos offres</a></li>
+            <li class="navlien"><a href="realis.html">Nos réalisations</a></li>
+            <li class="navlien"><a href="contact.html">Nous contacter</a></li>
+        </ul>
+        <div class="presentation">
+            <p class="presaccueil">
+                <label class="nom"> ENEA TELECOM </label>est une société
+                présente sur la marché Ivoirien depuis 2013 et, depuis fin 2019
+                sur le marché Burkinabé. Notre entreprise est spécialisée dans :
+            </p>
+            <div class="animation">
+                <span class="anim">Engineering</span>
+                <span class="anim">Networking</span>
+                <span class="anim">Energy</span>
+                <span class="anim">Assistance</span>
+            </div>
+            <hr />
+            <p class="presaccueil2">
+                <label class="nom"> ENEA TELECOM </label>c'est :
+            </p>
+            <div class="trypt">
+                <div class="encadr"><h2>UNE VISION</h2> <br><p class="text">Se positionner comme des leaders dans les télécoms.</p>
+                </div>
+                <div class="encadr"><h2>UNE MISSION</h2><br><p class="text">Tisser des partenariats avec nos clients afin de les accompagner dans la réalisation de leurs objectifs.</p></div>
+                <div class="encadr"><h2>DES VALEURS</h2><br><p class="text">Réactivité, efficacité, rapidité, qualité et flexibilité pour la satisfaction de nos clients.</p></div>
+            </div>
+        </div>
+        <script src="enea.js"></script>
     </body>
 </html>
