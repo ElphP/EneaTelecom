@@ -5,20 +5,24 @@
 }
 body {
     background-color: #44546a;
+    z-index: 1;
 }
 nav {
-    background-color: #f8e9a4;
+    background-color: #f7d987;
     font-family: "Roboto";
     font-size: 1.6rem;
     height: 80px;
     width: 100vw;
     display: flex;
     justify-content: space-between;
-    position: sticky;
     align-items: center;
     padding-right: 200px;
     padding-left: 100px;
     color: #44546a;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 2;
 }
 
 .logo {
@@ -28,7 +32,6 @@ nav {
 .onglets {
     display: flex;
     flex-direction: row;
-    padding-top: 20px;
 }
 
 section {
@@ -64,14 +67,13 @@ a {
     padding: 10px 15px;
     margin: 5px;
     font-weight: bolder;
-    /* text-shadow: 2px 2px 6px  rgb(197, 220, 231); */
 }
 
 li {
     padding: 10px 5px;
     background-color: white;
     text-align: center;
-    border: 2px solid #f8e9a4;
+    border: 2px solid #f7d987;
 }
 
 li:last-child {
@@ -87,7 +89,7 @@ li:hover {
     border-radius: 5px;
 }
 .o2 {
-    border: 2px solid #f8e9a4;
+    border: 2px solid #f7d987;
     border-radius: 5px;
 }
 
@@ -104,6 +106,7 @@ section:hover {
     border-radius: 5px;
     cursor: pointer;
 }
+
 .presentation {
     padding: 80px 10px 0px 10px;
 }
@@ -113,11 +116,12 @@ section:hover {
     padding: 10px;
     font-size: 2.2rem;
     color: whitesmoke;
-    width: 90%;
+    width: 80%;
+    text-align: justify;
 }
 
 .nom {
-    color: #f8e9a4;
+    color: #f7d987;
     font-family: "Libre Baskerville";
     font-weight: bold;
 }
@@ -127,7 +131,7 @@ section:hover {
     display: flex;
     flex-direction: column;
     font-size: 2.2rem;
-    color: whitesmoke;
+    color: #f7d987;
     font-family: "Libre Baskerville";
     justify-content: center;
     width: 300px;
@@ -152,20 +156,27 @@ section:hover {
 }
 
 .anim:nth-child(2) {
-    animation: fade-in 0.8s 0.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
-}
-
-.anim:nth-child(3) {
     animation: fade-in 0.8s 0.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
 }
 
+.anim:nth-child(3) {
+    animation: fade-in 0.8s 1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
 .anim:nth-child(4) {
-    animation: fade-in 0.8s 0.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    animation: fade-in 0.8s 1.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
     padding-bottom: 30px;
 }
 
-.presaccueil2  {
-     margin: auto;
+@keyframes fade-in {
+    100% {
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+
+.presaccueil2 {
+    margin: auto;
     padding-top: 40px;
     font-size: 2.2rem;
     color: whitesmoke;
@@ -178,18 +189,19 @@ hr {
     margin: auto;
 }
 
-.trypt  {
+.trypt {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     margin: 30px;
 }
 
-.encadr  {
+.encadr {
     border: 1px solid white;
-    width:350px;
+    width: 300px;
     padding: 30px;
     color: whitesmoke;
     margin: 10px;
+    box-shadow: 5px 5px 15px whitesmoke;
 }
 
 h2 {
@@ -198,17 +210,10 @@ h2 {
     text-align: center;
 }
 
-.text  {
-    font-family: "Roboto";
+.text {
+    font-family: "Libre Baskerville";
     font-size: 1.8rem;
-    text-align: justify;
-}
-
-@keyframes fade-in {
-    100% {
-        opacity: 1;
-        filter: blur(0);
-    }
+    text-align: center;
 }
 
 @media screen and (max-width: 1500px) and (min-width: 1200px) {
@@ -218,12 +223,19 @@ h2 {
 }
 
 @media screen and (max-width: 1200px) {
+    .logo {
+        width: 200px;
+    }
+
     section {
         display: none;
     }
 
     nav {
         padding-left: 15%;
+    }
+    .presentation {
+        padding: 20px 10px 0px 10px;
     }
 
     .burger {
@@ -306,14 +318,18 @@ h2 {
         line-height: 45px;
         padding-bottom: 18px;
         background-color: white;
-        border: 1px solid#f8e9a4;
+        border: 1px solid#f7d987;
     }
-    
+
     .trypt {
         flex-direction: column;
     }
 
-    .encadr  {
+    .encadr {
         width: auto;
+        box-shadow: none;
+    }
+    h2 > br {
+        display: none;
     }
 }
