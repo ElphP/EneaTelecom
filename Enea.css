@@ -4,12 +4,12 @@
     box-sizing: border-box;
 }
 body {
-    background-color: #44546a;
+    background-color: #ddebff;
     z-index: 1;
 }
 nav {
     background-color: #f7d987;
-    font-family: "Roboto";
+    font-family: "Magra";
     font-size: 1.6rem;
     height: 80px;
     width: 100vw;
@@ -18,7 +18,7 @@ nav {
     align-items: center;
     padding-right: 200px;
     padding-left: 100px;
-    color: #44546a;
+    color: black;
     position: -webkit-sticky;
     position: sticky;
     top: 0;
@@ -63,7 +63,7 @@ section:hover:nth-child(1) ul {
 
 a {
     text-decoration: none;
-    color: #44546a;
+    color: black;
     padding: 10px 15px;
     margin: 5px;
     font-weight: bolder;
@@ -71,7 +71,7 @@ a {
 
 li {
     padding: 10px 5px;
-    background-color: white;
+    background-color: whitesmoke;
     text-align: center;
     border: 2px solid #f7d987;
 }
@@ -81,11 +81,11 @@ li:last-child {
 }
 
 li:hover {
-    background-color: rgb(197, 220, 231);
+    background-color: #ddebff;
 }
 
 .o1 {
-    border: 2px solid #44546a;
+    border: 2px solid black;
     border-radius: 5px;
 }
 .o2 {
@@ -102,7 +102,7 @@ li:hover {
 }
 
 section:hover {
-    background-color: rgb(197, 220, 231);
+    background-color: #ddebff;
     border-radius: 5px;
     cursor: pointer;
 }
@@ -114,15 +114,15 @@ section:hover {
 .presaccueil {
     margin: auto;
     padding: 10px;
-    font-size: 2.2rem;
-    color: whitesmoke;
+    font-size: 2rem;
+    color: black;
     width: 80%;
-    text-align: justify;
+    text-align: left;
 }
 
 .nom {
-    color: #f7d987;
-    font-family: "Libre Baskerville";
+    color: black;
+    font-family: "Oxygen";
     font-weight: bold;
 }
 
@@ -130,9 +130,10 @@ section:hover {
     padding: 20px;
     display: flex;
     flex-direction: column;
-    font-size: 2.2rem;
-    color: #f7d987;
-    font-family: "Libre Baskerville";
+    font-size: 2.5rem;
+    color: black;
+    font-family: "Oxygen";
+    font-weight: bold;
     justify-content: center;
     width: 300px;
     align-content: center;
@@ -149,6 +150,12 @@ section:hover {
     padding: 10px;
     opacity: 0;
     filter: blur(4px);
+}
+
+.anim::first-letter {
+    font-size: 130%;
+    font-family: "Magra";
+    color: #8a2be2;
 }
 
 .anim:nth-child(1) {
@@ -179,12 +186,13 @@ section:hover {
     margin: auto;
     padding-top: 40px;
     font-size: 2.2rem;
-    color: whitesmoke;
+    color: black;
     width: 90%;
     text-align: center;
 }
 
 hr {
+    border-top: 4px solid #f7d987;
     width: 80%;
     margin: auto;
 }
@@ -196,22 +204,24 @@ hr {
 }
 
 .encadr {
-    border: 1px solid white;
+    background-color: #f7d987;
+    border: 2px solid black;
+    border-radius: 5px;
     width: 300px;
     padding: 30px;
-    color: whitesmoke;
+    color: black;
     margin: 10px;
-    box-shadow: 5px 5px 15px whitesmoke;
+    box-shadow: 15px 15px 15px black;
 }
 
 h2 {
-    font-family: "Libre Baskerville";
+    font-family: "Oxygen";
     font-size: 2rem;
     text-align: center;
 }
 
 .text {
-    font-family: "Libre Baskerville";
+    font-family: "Oxygen";
     font-size: 1.8rem;
     text-align: center;
 }
@@ -312,7 +322,7 @@ h2 {
     .navlien {
         text-align: left;
         padding-left: 15%;
-        font-family: "Roboto", Helvetica, Arial, sans-serif;
+        font-family: "Magra", Helvetica, Arial, sans-serif;
         font-size: 1.5rem;
         padding-top: 18px;
         line-height: 45px;
