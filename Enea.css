@@ -6,6 +6,7 @@
 body {
     background-color: #ddebff;
     z-index: 1;
+    width: 100%;
 }
 nav {
     background-color: #f7d987;
@@ -22,7 +23,7 @@ nav {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
-    z-index: 2;
+    z-index: 3;
 }
 
 .logo {
@@ -109,12 +110,13 @@ section:hover {
 
 .presentation {
     padding: 80px 10px 0px 10px;
+    
 }
 
 .presaccueil {
     margin: auto;
     padding: 10px;
-    font-size: 2rem;
+    font-size: 1.9rem;
     color: black;
     width: 80%;
     text-align: left;
@@ -130,7 +132,7 @@ section:hover {
     padding: 20px;
     display: flex;
     flex-direction: column;
-    font-size: 2.5rem;
+    font-size: 2.4rem;
     color: black;
     font-family: "Oxygen";
     font-weight: bold;
@@ -150,28 +152,30 @@ section:hover {
     padding: 10px;
     opacity: 0;
     filter: blur(4px);
+    letter-spacing: 3px;
 }
 
 .anim::first-letter {
     font-size: 130%;
     font-family: "Magra";
-    color: #8a2be2;
+    color: #298fc4;
+    text-shadow: 2px 4px 5px black;
 }
 
 .anim:nth-child(1) {
-    animation: fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    animation: fade-in 1s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
 }
 
 .anim:nth-child(2) {
-    animation: fade-in 0.8s 0.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    animation: fade-in 1s 0.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
 }
 
 .anim:nth-child(3) {
-    animation: fade-in 0.8s 1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    animation: fade-in 1s 1s forwards cubic-bezier(0.11, 0, 0.5, 0);
 }
 
 .anim:nth-child(4) {
-    animation: fade-in 0.8s 1.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    animation: fade-in 1s 1.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
     padding-bottom: 30px;
 }
 
@@ -195,6 +199,7 @@ hr {
     border-top: 4px solid #f7d987;
     width: 80%;
     margin: auto;
+    box-shadow: 1px 1px 5px black;
 }
 
 .trypt {
@@ -224,6 +229,49 @@ h2 {
     font-family: "Oxygen";
     font-size: 1.8rem;
     text-align: center;
+}
+
+/* page contact */
+.formul {
+    width: 50%;
+    padding: 50px;
+    margin: auto;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    text-align: left;
+}
+#nom {
+    width: 250px;
+}
+#email {
+    width: 250px;
+}
+#sujet {
+    width: 250px;
+}
+
+h1 {
+    font-family: "Magra";
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 20px;
+}
+
+.labform {
+    font-family: "Oxygen";
+    font-size: 1.2rem;
+    padding-top: 10px;
+    font-weight: bold;
+}
+
+#inpform {
+    padding: 5px;
+    margin: 30px auto;
 }
 
 @media screen and (max-width: 1500px) and (min-width: 1200px) {
@@ -302,17 +350,18 @@ h2 {
     }
     /* onglets de navigation */
     .navbar_lien {
-        display: none;
-        opacity: 0;
-        transition: all 2s;
+        display: block;
+        position: fixed;
+        top: -200px;
+        width: 100%;
+        transform: translateY(-280px);
+        transition: all 0.8s;
     }
 
     .navbar_lien.appnav2 {
-        display: block;
-        opacity: 1;
-        position: relative;
-        width: 100%;
-        transition: all 2s;
+        transform: translateY(280px);
+        z-index: 2;
+        transition: all 1.5s;
     }
 
     .navbar_lien.appnav2 a {
@@ -341,5 +390,21 @@ h2 {
     }
     h2 > br {
         display: none;
+    }
+
+    .formul {
+        padding: 20px;
+        margin: auto;
+        width: 90%;
+    }
+
+    form {
+        width: 100%;
+    }
+    textarea {
+        width: 100%;
+    }
+    h1 {
+        font-size: 1.6rem;
     }
 }

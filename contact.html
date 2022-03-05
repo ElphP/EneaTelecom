@@ -1,24 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
     <head>
         <meta charset="UTF-8" />
-        <title>Enea Telecom - Nous contacter</title>
+        <title>Enea Telecom - Page d'accueil</title>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <link rel="stylesheet" type="text/css" href="Enea.css" />
 
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-            href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Magra&family=Oxygen&display=swap"
             rel="stylesheet"
-            type="text/css"
         />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Roboto+Slab&display=swap"
-            rel="stylesheet"
-            type="text/css"
-        />
+
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     </head>
+
     <body>
         <nav>
             <img class="logo" src="enea.png" alt="logo_enea" />
@@ -26,15 +24,15 @@
                 <span class="bar"></span>
             </button>
             <div class="onglets">
-                <section class="o2">
-                    <a href="index.html">Notre société</a>
+                <section class="o1">
+                    <a href="index.html">L'entreprise</a>
                     <ul class="ssmenu">
                         <li><a href="index.html">Présentation</a></li>
                         <li><a href="index.html">Notre équipe</a></li>
                     </ul>
                 </section>
                 <section class="o2">
-                    <a href="offres.html">Nos offres</a>
+                    <a href="offres.html">Nos services</a>
                 </section>
                 <section class="o2">
                     <a href="realis.html">Nos réalisations</a>
@@ -43,17 +41,57 @@
                         <li><a href="realis.html">Burkina Faso</a></li>
                     </ul>
                 </section>
-                <section class="o1">
+                <section class="o2">
                     <a href="contact.html">Nous contacter</a>
                 </section>
             </div>
         </nav>
         <ul class="navbar_lien">
-            <li class="navlien"><a href="index.html">Notre société</a></li>
-            <li class="navlien"><a href="offres.html">Nos offres</a></li>
-            <li class="navlien"><a href="realis.html">Nos réalisations</a></li>
-            <li class="navlien"><a href="contact.html">Nous contacter</a></li>
+            <li class="navlien"><a href="index.html">L'entreprise</a></li>
+            <li class="navlien"><a href="offres.html">Nos services</a></li>
+            <li class="navlien">
+                <a href="realis.html">Nos réalisations</a>
+            </li>
+            <li class="navlien">
+                <a href="contact.html">Nous contacter</a>
+            </li>
         </ul>
+        <div class="formul">
+            <h1>Nous contacter par mail&nbsp;:</h1>
+            <form action="mail.php" method="POST">
+                <label class="labform" for="nom">Nom: </label
+                ><input
+                    type="text"
+                    name="nom"
+                    id="nom"
+                    placeholder="Votre nom"
+                />
+                <label class="labform" for="email">Email: </label
+                ><input
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="Votre email ici"
+                />
+                <label class="labform" for="sujet">Sujet: </label
+                ><input
+                    type="text"
+                    name="sujet"
+                    id="sujet"
+                    placeholder="Objet de votre message"
+                />
+                <label class="labform" for="mess">Message: </label>
+                <textarea
+                    id="mess"
+                    name="mess"
+                    rows="20"
+                    cols="40"
+                    placeholder="Votre message ici"
+                ></textarea>
+                <input id="inpform" type="submit" value="Envoyer" />
+            </form>
+        </div>
+
         <script src="enea.js"></script>
     </body>
 </html>
