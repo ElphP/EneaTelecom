@@ -109,14 +109,27 @@ section:hover {
 }
 
 .presentation {
-    padding: 80px 10px 0px 10px;
-    
+    position: relative;
+    height: 1200px;
+    /* background-image: url("telecom3.jpg");
+    background-size: cover;
+    background-repeat: no-repeat; */
+}
+
+.fond {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
 }
 
 .presaccueil {
+    position: relative;
     margin: auto;
-    padding: 10px;
-    font-size: 1.9rem;
+    padding: 80px 10px 10px 10px;
+    font-size: 2rem;
     color: black;
     width: 80%;
     text-align: left;
@@ -132,7 +145,7 @@ section:hover {
     padding: 20px;
     display: flex;
     flex-direction: column;
-    font-size: 2.4rem;
+    font-size: 2.6rem;
     color: black;
     font-family: "Oxygen";
     font-weight: bold;
@@ -158,7 +171,7 @@ section:hover {
 .anim::first-letter {
     font-size: 130%;
     font-family: "Magra";
-    color: #298fc4;
+    color: #eb017b;
     text-shadow: 2px 4px 5px black;
 }
 
@@ -187,15 +200,18 @@ section:hover {
 }
 
 .presaccueil2 {
+    position: relative;
     margin: auto;
     padding-top: 40px;
     font-size: 2.2rem;
     color: black;
     width: 90%;
     text-align: center;
+    opacity: 1;
 }
 
 hr {
+    position: relative;
     border-top: 4px solid #f7d987;
     width: 80%;
     margin: auto;
@@ -203,6 +219,7 @@ hr {
 }
 
 .trypt {
+    position: relative;
     display: flex;
     justify-content: space-evenly;
     margin: 30px;
@@ -294,6 +311,14 @@ h1 {
     }
     .presentation {
         padding: 20px 10px 0px 10px;
+    }
+
+    .fond {
+        display: none;
+    }
+
+    .presaccueil  {
+        padding: 10px;
     }
 
     .burger {
