@@ -24,15 +24,15 @@
                 <span class="bar"></span>
             </button>
             <div class="onglets">
-                <section class="o1">
+                <section class="o2">
                     <a href="index.html">L'entreprise</a>
                     <ul class="ssmenu">
                         <li><a href="index.html">Présentation</a></li>
-                        <li><a href="index.html">Notre équipe</a></li>
+                        <li><a href="index.html#equip">Notre équipe</a></li>
                     </ul>
                 </section>
                 <section class="o2">
-                    <a href="offres.html">Nos services</a>
+                    <a href="offres.html">Nos offres</a>
                 </section>
                 <section class="o2">
                     <a href="realis.html">Nos réalisations</a>
@@ -41,7 +41,7 @@
                         <li><a href="realis.html">Burkina Faso</a></li>
                     </ul>
                 </section>
-                <section class="o2">
+                <section class="o1">
                     <a href="contact.html">Nous contacter</a>
                 </section>
             </div>
@@ -56,42 +56,71 @@
                 <a href="contact.html">Nous contacter</a>
             </li>
         </ul>
-        <div class="formul">
-            <h1>Nous contacter par mail&nbsp;:</h1>
-            <form action="mail.php" method="POST">
-                <label class="labform" for="nom">Nom: </label
-                ><input
-                    type="text"
-                    name="nom"
-                    id="nom"
-                    placeholder="Votre nom"
-                />
-                <label class="labform" for="email">Email: </label
-                ><input
-                    type="email"
-                    name="email"
-                    id="email"
-                    placeholder="Votre email ici"
-                />
-                <label class="labform" for="sujet">Sujet: </label
-                ><input
-                    type="text"
-                    name="sujet"
-                    id="sujet"
-                    placeholder="Objet de votre message"
-                />
-                <label class="labform" for="mess">Message: </label>
-                <textarea
-                    id="mess"
-                    name="mess"
-                    rows="20"
-                    cols="40"
-                    placeholder="Votre message ici"
-                ></textarea>
-                <input id="inpform" type="submit" value="Envoyer" />
-            </form>
-        </div>
 
+        <img class="fond" src="telecom3.jpg" alt="telecom" />
+        <div class="pgContact">
+            <h1>Vous souhaitez nous joindre par téléphone?</h1>
+            <br />
+            <h1>Nous envoyer un mail? C'est par ici!</h1>
+            <div class="contact">
+                <div class="phone">
+                    <img src="phone-call.png" alt="phoneIcon" />
+                    <div class="numeros">
+                        <p>+226 55 33 59 33</p>
+                        <p>+225 07 89 05 86</p>
+                        <p>+33 6 21 31 81 71</p>
+                    </div>
+                </div>
+                <div class="mail">
+                    <img src="email.png" alt="mailIcon" />
+
+                    <form action="mail.php" method="POST">
+                        <!-- <label class="labform" for="nom">Nom: </label> -->
+                        <input
+                            type="text"
+                            name="nom"
+                            id="nom"
+                            placeholder="Votre nom"
+                        />
+                        <!-- <label class="labform" for="email">Email: </label> -->
+                        <input
+                            type="email"
+                            name="email"
+                            id="email"
+                            placeholder="Votre E-mail"
+                        />
+                        <!-- <label class="labform" for="sujet">Sujet: </label> -->
+                        <input
+                            type="text"
+                            name="sujet"
+                            id="sujet"
+                            placeholder="Objet"
+                        />
+                        <!-- <label class="labform" for="mess">Message: </label> -->
+                        <textarea
+                            id="mess"
+                            name="mess"
+                            rows="20"
+                            cols="40"
+                            placeholder="Votre message ici"
+                        ></textarea>
+                        <input id="subForm" type="submit" value="Envoyer" />
+                    </form>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <a
+                href="https://www.flaticon.com/free-icons/phone"
+                title="phone icons"
+                >Phone icons created by Creaticca Creative Agency - Flaticon</a
+            >
+            <a
+                href="https://www.flaticon.com/free-icons/email"
+                title="email icons"
+                >Email icons created by Uniconlabs - Flaticon</a
+            >
+        </footer>
         <script src="enea.js"></script>
     </body>
 </html>

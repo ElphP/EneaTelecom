@@ -3,6 +3,11 @@
     padding: 0px;
     box-sizing: border-box;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #ddebff;
     z-index: 1;
@@ -70,18 +75,18 @@ a {
     font-weight: bolder;
 }
 
-li {
+.onglets li {
     padding: 10px 5px;
     background-color: whitesmoke;
     text-align: center;
     border: 2px solid #f7d987;
 }
 
-li:last-child {
+.onglets li:last-child {
     border-top: none;
 }
 
-li:hover {
+.onglets li:hover {
     background-color: #ddebff;
 }
 
@@ -122,7 +127,7 @@ section:hover {
     padding: 0;
     width: 100%;
     height: 100%;
-    opacity: 0.6;
+    opacity: 0.65;
 }
 
 .presaccueil {
@@ -145,7 +150,7 @@ section:hover {
     padding: 20px;
     display: flex;
     flex-direction: column;
-    font-size: 2.6rem;
+    font-size: 2.4rem;
     color: black;
     font-family: "Oxygen";
     font-weight: bold;
@@ -153,7 +158,7 @@ section:hover {
     width: 300px;
     align-content: center;
     margin: auto;
-    transform: scale(0.75);
+    transform: scale(0.65);
     animation: scale 6s forwards cubic-bezier(0.5, 1, 0.89, 1);
 }
 @keyframes scale {
@@ -164,31 +169,31 @@ section:hover {
 .anim {
     padding: 10px;
     opacity: 0;
-    filter: blur(4px);
-    letter-spacing: 3px;
+    filter: blur(15px);
+    letter-spacing: 12px;
 }
 
 .anim::first-letter {
-    font-size: 130%;
+    font-size: 145%;
     font-family: "Magra";
     color: #eb017b;
     text-shadow: 2px 4px 5px black;
 }
 
 .anim:nth-child(1) {
-    animation: fade-in 1s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    animation: fade-in 1.8s 0s forwards cubic-bezier(0.11, 0, 0.5, 0);
 }
 
 .anim:nth-child(2) {
-    animation: fade-in 1s 0.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    animation: fade-in 1.8s 0.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
 }
 
 .anim:nth-child(3) {
-    animation: fade-in 1s 1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    animation: fade-in 1.8s 1.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
 }
 
 .anim:nth-child(4) {
-    animation: fade-in 1s 1.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    animation: fade-in 1.8s 2.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
     padding-bottom: 30px;
 }
 
@@ -248,48 +253,160 @@ h2 {
     text-align: center;
 }
 
-/* page contact */
-.formul {
-    width: 50%;
-    padding: 50px;
-    margin: auto;
+#equip {
+    padding: 30px;
+    display: flex;
+}
+
+#equip img {
+    width: 60%;
+    height: auto;
+}
+
+.equiptext {
+    width: 40%;
     text-align: center;
+    padding: 30px;
+}
+
+.equiptext h2 {
+    padding: 50px;
+    text-decoration: underline;
+    display: inline;
+}
+
+.liste {
+    padding: 30px;
+}
+
+.equiptext li {
+    font-family: "Oxygen";
+    list-style: none;
+}
+
+/* page contact */
+.pgContact {
+    position: relative;
+    padding-top: 30px;
 }
 
 form {
     display: flex;
     flex-direction: column;
-    width: auto;
     text-align: left;
+    width: 95%;
+    padding: 10px 0;
 }
+
 #nom {
-    width: 250px;
+    width: 280px;
 }
 #email {
-    width: 250px;
+    width: 280px;
 }
 #sujet {
-    width: 250px;
+    width: 280px;
 }
 
-h1 {
+.pgContact h1 {
     font-family: "Magra";
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: bold;
-    padding: 20px;
+    text-align: center;
 }
 
-.labform {
+/* .labform {
     font-family: "Oxygen";
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     padding-top: 10px;
     font-weight: bold;
+} */
+
+#subForm {
+    padding: 3px;
+    width: 100px;
+    margin-top: 30px;
 }
 
-#inpform {
-    padding: 5px;
-    margin: 30px auto;
+.pgContact input,
+textarea {
+    font-size: 1.2rem;
+    margin: 6px 0;
+    padding: 3px;
 }
+
+.pgContact textarea {
+    width: 90%;
+}
+
+.pgContact input:hover {
+    box-shadow: 5px 5px 8px black;
+}
+
+.pgContact textarea:hover {
+    box-shadow: 5px 5px 15px black;
+}
+
+.pgContact input:focus {
+    box-shadow: 5px 5px 8px black;
+}
+
+.pgContact textarea:focus {
+    box-shadow: 5px 5px 8px black;
+}
+
+.pgContact submit:hover {
+    box-shadow: 5px 5px 8px black;
+}
+
+.pgContact img {
+    width: 50px;
+    height: 50px;
+}
+
+.contact {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.phone {
+    width: 50%;
+    padding: 50px;
+    text-align: center;
+}
+
+.mail {
+    padding-left: 10%;
+    width: 50%;
+    padding: 50px;
+}
+
+.numeros {
+    background-color: #ddebff;
+    color: black;
+    border-radius: 5px;
+    font-family: "Magra";
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    margin: 15px auto;
+    border: 3px solid black;
+    box-shadow: 15px 15px 15px black;
+    max-width: 400px;
+}
+
+.numeros p {
+    background-color: #f7d987;
+    padding: 20px 0;
+        margin: 25px 20px;
+        border: 2px solid black;
+        box-shadow: inset 4px 4px 12px #645732;
+        cursor: pointer;
+}
+
+
 
 @media screen and (max-width: 1500px) and (min-width: 1200px) {
     nav {
@@ -316,8 +433,11 @@ h1 {
     .fond {
         display: none;
     }
+    .presentation {
+        height: auto;
+    }
 
-    .presaccueil  {
+    .presaccueil {
         padding: 10px;
     }
 
@@ -416,8 +536,25 @@ h1 {
     h2 > br {
         display: none;
     }
+    #equip {
+        flex-direction: column;
+    }
 
-    .formul {
+    #equip img {
+        display: none;
+    }
+
+    #equip .equiptext {
+        width: 100%;
+        height: auto;
+    }
+    .equiptext h2 {
+        padding: 0;
+        text-align: center;
+    }
+
+    /* page contact */
+    .pgContact {
         padding: 20px;
         margin: auto;
         width: 90%;
@@ -426,10 +563,156 @@ h1 {
     form {
         width: 100%;
     }
-    textarea {
+    .pgContact textarea {
         width: 100%;
     }
-    h1 {
+    .pgContact h1 {
         font-size: 1.6rem;
+        width: 75%;
+        margin: auto;
     }
+
+    #nom {
+        width: 100%;
+    }
+    #email {
+        width: 100%;
+    }
+    #sujet {
+        width: 100%;
+    }
+    .pgContact {
+        width: 100%;
+    }
+
+    .contact {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .phone {
+        width: 100%;
+        margin: auto;
+        padding: 20px;
+        text-align: left;
+    }
+
+    .mail {
+        width: 100%;
+        margin: auto;
+        padding: 20px;
+    }
+
+    .numeros {
+        font-size: 1.8rem;
+        opacity: 1;
+        margin: 15px 0;
+    }
+
+    .numeros p {
+        padding: 20px 0;
+        margin: 10px 0;
+        border: 2px solid black;
+        box-shadow: inset 4px 4px 12px #645732;
+    }
+
+
+    #subForm {
+        margin: 20px auto;
+    }
+}
+
+/* slideshow */
+.galerie > h1 {
+    font-family: "Oxygen", Georgia, Times, serif;
+    font-size: clamp(20px, 7vw, 35px);
+    text-align: center;
+    font-weight: bold;
+}
+
+.slideshow-container {
+    margin-top: 2vw;
+    overflow: hidden;
+    min-height: 60vmin;
+    cursor: grab;
+    position: relative;
+    margin-bottom: 1vw;
+}
+
+.slideshow-container:active {
+    cursor: grabbing;
+}
+
+.slideshow {
+    position: absolute;
+    height: 100%;
+    display: flex;
+    pointer-events: none;
+}
+
+.slide {
+    flex-shrink: 0;
+    height: 100%;
+    width: 80vmin;
+    color: #fff;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.s1 {
+    background-image: url("pexels-photo-128402.jpeg");
+}
+.s2 {
+    background-image: url("pexels-photo-227417.jpeg");
+}
+.s3 {
+    background-image: url("pexels-photo-279329.jpeg");
+}
+.s4 {
+    background-image: url("pexels-photo-344649.jpeg");
+}
+.s5 {
+    background-image: url("pexels-photo-417344.jpeg");
+}
+
+.slide:not(:nth-child(1)) {
+    margin-left: 10px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.15);
+}
+
+.slide h2 {
+    color: black;
+    /* text-shadow: 0 0 5px rgba(0, 0, 0, 0.4); */
+    position: absolute;
+    top: clamp(10px, 2vw, 20px);
+    left: clamp(10px, 2vw, 20px);
+    font-size: clamp(20px, 3vw, 40px);
+    font-weight: 300;
+}
+.galerie h1 {
+    font-family: "Oxygen";
+    padding-top: 50px;
+    text-decoration: underline;
+}
+
+/* footer */
+footer {
+    position: absolute;
+    font-family: "Magra";
+    margin-bottom: 0px;
+    margin-top: -33px;
+    width: 100%;
+    height: 80px;
+    text-align: center;
+    background-color: #f7d987;
 }
