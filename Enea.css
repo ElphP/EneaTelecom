@@ -532,6 +532,13 @@ textarea {
     padding: 50px;
 }
 
+.mail .error  {
+    color : white;
+    background-color: #eb017b;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
 .numeros {
     background-color: #ddebff;
     color: black;
