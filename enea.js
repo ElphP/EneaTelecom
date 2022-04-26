@@ -1,3 +1,5 @@
+// menu burger
+
 function ToggleMenu() {
     const burger = document.querySelector(".burger");
     const navbar_lien = document.querySelector(".navbar_lien");
@@ -13,84 +15,99 @@ ToggleMenu();
 
 
 // slider
-const slider = document.querySelector(".slideshow-container");
-let holding = false;
-let firstClickX;
-let alreadyLeftScrolled;
-let velocity;
-let rafID;
+// const slider = document.querySelector(".slideshow-container");
+// let holding = false;
+// let firstClickX;
+// let alreadyLeftScrolled;
+// let velocity;
+// let rafID;
 
-slider.addEventListener("mousedown", (e) => {
-    holding = true;
+// slider.addEventListener("mousedown", (e) => {
+//     holding = true;
 
-    firstClickX = e.pageX - slider.offsetLeft;
+//     firstClickX = e.pageX - slider.offsetLeft;
 
-    alreadyLeftScrolled = slider.scrollLeft;
+//     alreadyLeftScrolled = slider.scrollLeft;
 
-    stopTransition();
-});
+//     stopTransition();
+// });
 
-slider.addEventListener("mousemove", (e) => {
-    if (!holding) return;
+// slider.addEventListener("mousemove", (e) => {
+//     if (!holding) return;
 
-    const x = e.pageX - slider.offsetLeft;
+//     const x = e.pageX - slider.offsetLeft;
 
-    const scrolled = (x - firstClickX) * 2;
+//     const scrolled = (x - firstClickX) * 2;
 
-    const prevScrollLeft = slider.scrollLeft;
+//     const prevScrollLeft = slider.scrollLeft;
 
-    slider.scrollLeft = alreadyLeftScrolled - scrolled;
+//     slider.scrollLeft = alreadyLeftScrolled - scrolled;
 
-    velocity = slider.scrollLeft - prevScrollLeft;
-});
+//     velocity = slider.scrollLeft - prevScrollLeft;
+// });
 
-slider.addEventListener("mouseup", () => {
-    holding = false;
-    startTransition();
-});
-slider.addEventListener("mouseleave", () => {
-    holding = false;
-});
+// slider.addEventListener("mouseup", () => {
+//     holding = false;
+//     startTransition();
+// });
+// slider.addEventListener("mouseleave", () => {
+//     holding = false;
+// });
 
-function startTransition() {
-    stopTransition();
+// function startTransition() {
+//     stopTransition();
 
-    rafID = requestAnimationFrame(decreasingTransition);
-}
+//     rafID = requestAnimationFrame(decreasingTransition);
+// }
 
-function stopTransition() {
-    cancelAnimationFrame(rafID);
-}
-function decreasingTransition() {
-    slider.scrollLeft += velocity;
-    velocity *= 0.95;
-    if (Math.abs(velocity) > 0.5) {
-        rafID = requestAnimationFrame(decreasingTransition);
-    }
-}
+// function stopTransition() {
+//     cancelAnimationFrame(rafID);
+// }
+// function decreasingTransition() {
+//     slider.scrollLeft += velocity;
+//     velocity *= 0.95;
+//     if (Math.abs(velocity) > 0.5) {
+//         rafID = requestAnimationFrame(decreasingTransition);
+//     }
+// }
 
-slider.addEventListener("touchstart", (e) => {
-    holding = true;
-    // pageX => la largeur entre mon click et le DOCUMENT
-    firstClickX = e.targetTouches[0].pageX - slider.offsetLeft;
+// slider.addEventListener("touchstart", (e) => {
+//     holding = true;
+//     // pageX => la largeur entre mon click et le DOCUMENT
+//     firstClickX = e.targetTouches[0].pageX - slider.offsetLeft;
 
-    alreadyLeftScrolled = slider.scrollLeft;
-    stopTransition();
-});
-slider.addEventListener("touchend", () => {
-    holder = false;
-    startTransition();
-});
-slider.addEventListener("touchmove", (e) => {
-    if (!holding) return;
+//     alreadyLeftScrolled = slider.scrollLeft;
+//     stopTransition();
+// });
+// slider.addEventListener("touchend", () => {
+//     holder = false;
+//     startTransition();
+// });
+// slider.addEventListener("touchmove", (e) => {
+//     if (!holding) return;
 
-    const x = e.targetTouches[0].pageX - slider.offsetLeft;
+//     const x = e.targetTouches[0].pageX - slider.offsetLeft;
 
-    const scrolled = (x - firstClickX) * 2;
+//     const scrolled = (x - firstClickX) * 2;
 
-    const prevScrollLeft = slider.scrollLeft;
+//     const prevScrollLeft = slider.scrollLeft;
 
-    slider.scrollLeft = alreadyLeftScrolled - scrolled;
+//     slider.scrollLeft = alreadyLeftScrolled - scrolled;
 
-    velocity = slider.scrollLeft - prevScrollLeft;
-});
+//     velocity = slider.scrollLeft - prevScrollLeft;
+// });
+
+// affichScroll
+const valAjout = document.querySelector(".affichScroll");
+window.addEventListener('scroll', () =>  {
+    const{ scrollTop, clientHeight} = document.documentElement;
+   const AffichScrollToTopViewer = valAjout.getBoundingClientRect().bottom;
+
+   if (scrollTop> (scrollTop + AffichScrollToTopViewer).toFixed()- clientHeight*0.6)  {
+    valAjout.classList.add ("active");
+   }
+
+   if (scrollTop<clientHeight*0.25)  {
+       valAjout.classList.remove("active");
+   }
+})
