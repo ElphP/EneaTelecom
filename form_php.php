@@ -41,10 +41,10 @@
 
             if($name_error == "" and $mail_error == "" and $mess_error == "")  {
                 unset($_POST["submit"]);
-                $mailTo = "elphege78@hotmail.fr";
+                $mailTo = "elphege78@hotmail.com";
                 $subject = "Message du site EneaTelecom";
-                $contenu =  "Ce message a été envoyé automatiquement depuis le formulaire du site EneaTelecom par \n\n ".$name.
-                ".\n Adresse e-mail: ".$mail. "\n\n Objet du message: ".$objet. "\n" .$message. "\n"; 
+                $contenu =  "Ce message a été envoyé automatiquement depuis le formulaire du site EneaTelecom.\n\n Contact : ".$name.
+                "\n Adresse e-mail: ".$mail. "\n Objet du message: ".$objet. "\n\n" .$message. "\n"; 
                 
                 if(mail($mailTo,$subject,$contenu))  {
                 $mess_ok = "Votre message a bien été envoyé,\n nous vous envoyons un mail de confirmation à l'adresse que vous nous avez indiquée.";
