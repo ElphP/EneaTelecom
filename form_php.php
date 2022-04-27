@@ -41,12 +41,13 @@
 
             if($name_error == "" and $mail_error == "" and $mess_error == "")  {
                 unset($_POST["submit"]);
-                $mailTo = "elphege78@hotmail.com";
+                $mailTo = "elphege78@gmail.com";
                 $subject = "Message du site EneaTelecom";
                 $contenu =  "Ce message a été envoyé automatiquement depuis le formulaire du site EneaTelecom.\n\n Contact : ".$name.
                 "\n Adresse e-mail: ".$mail. "\n Objet du message: ".$objet. "\n\n" .$message. "\n"; 
                 
-                if(mail($mailTo,$subject,$contenu))  {
+                if(mail($mailTo,$subject,$contenu))  { 
+                $color_mess ="email_success";
                 $mess_ok = "Votre message a bien été envoyé,\n nous vous envoyons un mail de confirmation à l'adresse que vous nous avez indiquée.";
                 
                 $retourClient = "Nous avons bien reçu votre message, nous allons le traiter dans les plus brefs délais. \n\n
@@ -60,7 +61,8 @@
                 $name = $mail = $objet = $message = "";
                 }
                 else  {
-                    $mess_ok = "L'envoi du message a échoué. Veuillez recommencer ou nous contacter par téléphone.";
+                    $color_mess = "error";
+                    $mess_ok = "L'envoi du message a échoué. Veuillez réessayer ou nous contacter par téléphone.";
                 }
             }
             

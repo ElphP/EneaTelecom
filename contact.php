@@ -43,7 +43,7 @@
                 </ul>
             </section>
             <section class="o1">
-                <a href="contact.html">Nous contacter</a>
+                <a href="contact.php">Nous contacter</a>
             </section>
         </div>
     </nav>
@@ -54,9 +54,10 @@
             <a href="realis.html">Nos réalisations</a>
         </li>
         <li class="navlien">
-            <a href="contact.html">Nous contacter</a>
+            <a href="contact.php">Nous contacter</a>
         </li>
     </ul>
+
 
     <div class="pgContact">
         <img class="fond" src="telecom3.jpg" alt="telecom" />
@@ -78,7 +79,7 @@
                 </div>
             </div>
             <div class="mail">
-                <img class="icon" src="email.png" alt="mailIcon" />
+                <div class="center_div"><img class="icon" src="email.png" alt="mailIcon" /></div>
 
                 <form action="<?php echo htmlentities($_SERVER['PHP_SELF']) ?>" method="POST">
 
@@ -89,11 +90,11 @@
                     <span class="error"><?php echo $mail_error ?></span>
                     <input type="text" name="sujet" id="sujet" placeholder="Objet" value="<?php echo $objet ?>" />
 
-                    <textarea id=" mess" name="mess" rows="20" cols="40"
-                        placeholder="Votre message ici"><?php echo $message ?></textarea>
+                    <textarea id=" mess" name="mess" rows="15"
+                        placeholder=" Votre message ici"><?php echo $message ?></textarea>
                     <span class=" error"><?php echo $mess_error ?></span>
                     <input id="subForm" type="submit" name="submit" value=" Envoyer" />
-                    <span class="error"><?php echo $mess_ok ?></span>
+                    <span class="<?php echo $color_mess ?>"><?php echo $mess_ok ?></span>
                 </form>
             </div>
         </div>

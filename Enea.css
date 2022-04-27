@@ -293,7 +293,6 @@ h2 {
 form {
     display: flex;
     flex-direction: column;
-    text-align: left;
     width: 95%;
     padding: 10px 0;
 }
@@ -327,42 +326,7 @@ form {
     font-weight: bold;
 } */
 
-#subForm {
-    padding: 3px;
-    width: 100px;
-    margin-top: 30px;
-}
-
-.pgContact input,
-textarea {
-    font-family: "Magra";
-    font-weight: bold;
-    font-size: 1.2rem;
-    margin: 6px 0;
-    padding: 3px;
-}
-
-.pgContact textarea {
-    width: 90%;
-}
-
-.pgContact input:hover {
-    box-shadow: 5px 5px 8px black;
-}
-
-.pgContact textarea:hover {
-    box-shadow: 5px 5px 15px black;
-}
-
-.pgContact input:focus {
-    box-shadow: 5px 5px 8px black;
-}
-
-.pgContact textarea:focus {
-    box-shadow: 5px 5px 8px black;
-}
-
- .icon {
+.icon {
     width: 50px;
     height: 50px;
 }
@@ -378,32 +342,6 @@ textarea {
     width: 50%;
     padding: 50px;
     text-align: center;
-}
-
-.mail {
-    position: relative;
-    padding-left: 10%;
-    width: 50%;
-    padding: 50px;
-}
-
-.mail img {
-    margin-left: 115px;
-}
-
-.numeros {
-    background-color: #ddebff;
-    color: black;
-    border-radius: 5px;
-    font-family: "Magra";
-    font-size: 2.5rem;
-    font-weight: bold;
-    text-align: center;
-    padding: 10px;
-    margin: 15px auto;
-    border: 3px solid black;
-    box-shadow: 15px 15px 15px black;
-    max-width: 400px;
 }
 
 .container {
@@ -489,8 +427,9 @@ textarea {
     cursor: none;
 }
 
-.pgContact textarea {
-    width: 90%;
+.mail {
+    position: relative;
+    width: 50%;
 }
 
 .pgContact input:hover {
@@ -513,6 +452,34 @@ textarea {
     box-shadow: 5px 5px 8px black;
 }
 
+#subForm {
+    padding: 3px;
+    width: 100px;
+    margin-top: 30px;
+}
+
+.pgContact input,
+textarea {
+    font-family: "Magra";
+    font-size: 1.2rem;
+    margin: 6px 0;
+    padding: 3px;
+}
+
+.pgContact input {
+    font-weight: bold;
+}
+
+form {
+    background-color: #ddebff;
+    border-radius: 5px;
+    padding: 25px;
+    margin: 15px 0 30px 0;
+    /* border: 3px solid black; */
+    box-shadow: 15px 15px 15px black;
+    max-width: 700px;
+    /* width: 90%; */
+}
 
 .contact {
     width: 100%;
@@ -525,18 +492,29 @@ textarea {
     padding: 50px;
     text-align: center;
 }
+.center_div {
 
-.mail {
-    padding-left: 10%;
-    width: 50%;
-    padding: 50px;
+max-width: 700px;
 }
 
-.mail .error  {
-    color : white;
-    background-color: #eb017b;
-    font-size: 1.5rem;
+.mail {
+    width: 50%;
+    padding: 50px;
+    text-align: center;
+}
+
+.mail .error {
+    color: red;
+    font-size: 1.2rem;
     font-weight: bold;
+    text-align: left;
+}
+
+.mail .email_success {
+    color: green;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: left;
 }
 
 .numeros {
@@ -549,7 +527,7 @@ textarea {
     text-align: center;
     padding: 10px;
     margin: 15px auto;
-    border: 3px solid black;
+    /* border: 3px solid black; */
     box-shadow: 15px 15px 15px black;
     max-width: 400px;
 }
@@ -557,13 +535,11 @@ textarea {
 .numeros p {
     background-color: #f7d987;
     padding: 20px 0;
-        margin: 25px 20px;
-        border: 2px solid black;
-        box-shadow: inset 4px 4px 12px #645732;
-        cursor: pointer;
+    margin: 25px 20px;
+    border: 2px solid black;
+    box-shadow: inset 4px 4px 12px #645732;
+    cursor: pointer;
 }
-
-
 
 @media screen and (max-width: 1500px) and (min-width: 1200px) {
     nav {
@@ -572,10 +548,10 @@ textarea {
 }
 
 @media screen and (max-width: 1200px) {
-    body  {
+    body {
         background-color: #153061;
     }
-    
+
     .logo {
         width: 200px;
     }
@@ -588,20 +564,26 @@ textarea {
         color: black;
         padding-left: 15%;
     }
-    
+
     .fond {
         display: none;
     }
     .presentation {
         height: auto;
-         padding: 20px 10px 0px 10px;
+        padding: 20px 10px 0px 10px;
     }
 
     .presaccueil {
         padding: 10px;
     }
 
-    .presaccueil, .presaccueil2, .nom, #equip, .anim, .pgContact, .galerie  {
+    .presaccueil,
+    .presaccueil2,
+    .nom,
+    #equip,
+    .anim,
+    .pgContact,
+    .galerie {
         color: white;
     }
 
@@ -728,9 +710,6 @@ textarea {
         width: 90%;
     }
 
-    form {
-        width: 100%;
-    }
     .pgContact textarea {
         width: 100%;
     }
@@ -770,16 +749,11 @@ textarea {
         width: 100%;
         margin: auto;
         padding: 20px;
+        text-align: left;
     }
 
     .mail img {
         margin-left: 0;
-    }
-
-    .numeros {
-        font-size: 1.8rem;
-        opacity: 1;
-        margin: 15px 0;
     }
 
     #subForm {
