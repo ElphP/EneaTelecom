@@ -50,7 +50,7 @@
                 $color_mess ="email_success";
                 $mess_ok = "Votre message a bien été envoyé,\n nous vous envoyons un mail de confirmation à l'adresse que vous nous avez indiquée.";
                 
-                $retourClient = "Nous avons bien reçu votre message, nous allons le traiter dans les plus brefs délais. \n\n
+                $retourClient = "Bonjour, nous avons bien reçu votre message, nous allons le traiter dans les plus brefs délais. \n\n
                 
                 Bien cordialement,\n 
                 L'équipe Enea Telecom \n\n 
