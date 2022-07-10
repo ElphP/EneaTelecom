@@ -13,6 +13,29 @@ function ToggleMenu() {
 }
 ToggleMenu();
 
+// Rotation des cartes pour le format mobile
+
+function ToggleCard() {
+    var liste_contenant = document.querySelectorAll(".contenant");
+    var liste_card = document.querySelectorAll(".card");
+    for (let i = 0; i < liste_contenant.length; i++) {
+        const contenant = liste_contenant[i];
+        const card = liste_card[i];
+        contenant.addEventListener("click", () => {
+            if (card.hasAttribute("style")) {
+                card.removeAttribute("style");
+            } else {
+                card.style.transform = "rotateY(180deg)";
+            }
+        });
+    }
+}
+ToggleCard();
+
+// pot de miel
+function changeStyleForm() {
+document.getElementById("website").style.display = "none";
+}
 
 // slider
 // const slider = document.querySelector(".slideshow-container");
@@ -98,16 +121,3 @@ ToggleMenu();
 // });
 
 // affichScroll
-const valAjout = document.querySelector(".affichScroll");
-window.addEventListener('scroll', () =>  {
-    const{ scrollTop, clientHeight} = document.documentElement;
-   const AffichScrollToTopViewer = valAjout.getBoundingClientRect().bottom;
-
-   if (scrollTop> (scrollTop + AffichScrollToTopViewer).toFixed()- clientHeight*0.6)  {
-    valAjout.classList.add ("active");
-   }
-
-   if (scrollTop<clientHeight*0.25)  {
-       valAjout.classList.remove("active");
-   }
-})

@@ -18,6 +18,9 @@ nav {
     font-size: 1.6rem;
     height: 80px;
     width: 100vw;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -35,6 +38,9 @@ nav {
 }
 
 .onglets {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
     flex-direction: row;
 }
@@ -45,6 +51,9 @@ section {
 }
 
 .ssmenu {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
     list-style: none;
     flex-direction: column;
@@ -294,7 +303,6 @@ h2 {
 form {
     display: flex;
     flex-direction: column;
-    text-align: left;
     width: 95%;
     padding: 10px 0;
 }
@@ -305,6 +313,11 @@ form {
 #email {
     width: 280px;
 }
+
+#website {
+    width: 280px;
+}
+
 #sujet {
     width: 280px;
 }
@@ -316,7 +329,7 @@ form {
 .pgContact h1 {
     position: relative;
     font-family: "Magra";
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     font-weight: bold;
     text-align: center;
 }
@@ -328,42 +341,7 @@ form {
     font-weight: bold;
 } */
 
-#subForm {
-    padding: 3px;
-    width: 100px;
-    margin-top: 30px;
-}
-
-.pgContact input,
-textarea {
-    font-family: "Magra";
-    font-weight: bold;
-    font-size: 1.2rem;
-    margin: 6px 0;
-    padding: 3px;
-}
-
-.pgContact textarea {
-    width: 90%;
-}
-
-.pgContact input:hover {
-    box-shadow: 5px 5px 8px black;
-}
-
-.pgContact textarea:hover {
-    box-shadow: 5px 5px 15px black;
-}
-
-.pgContact input:focus {
-    box-shadow: 5px 5px 8px black;
-}
-
-.pgContact textarea:focus {
-    box-shadow: 5px 5px 8px black;
-}
-
-.contact .icon {
+.icon {
     width: 50px;
     height: 50px;
 }
@@ -379,32 +357,6 @@ textarea {
     width: 50%;
     padding: 50px;
     text-align: center;
-}
-
-.mail {
-    position: relative;
-    padding-left: 10%;
-    width: 50%;
-    padding: 50px;
-}
-
-.mail img {
-    margin-left: 115px;
-}
-
-.numeros {
-    background-color: #ddebff;
-    color: black;
-    border-radius: 5px;
-    font-family: "Magra";
-    font-size: 2.5rem;
-    font-weight: bold;
-    text-align: center;
-    padding: 10px;
-    margin: 15px auto;
-    border: 3px solid black;
-    box-shadow: 15px 15px 15px black;
-    max-width: 400px;
 }
 
 .container {
@@ -427,9 +379,6 @@ textarea {
     transform-style: preserve-3d;
     transform-origin: center;
     cursor: pointer;
-}
-
-.container .box3 {
     font-size: 1.9rem;
 }
 
@@ -449,6 +398,7 @@ textarea {
     transform: rotateX(-90deg);
     transform-style: preserve-3d;
     transform-origin: top;
+    font-size: 2.5rem;
 }
 
 .container .box2:after {
@@ -467,6 +417,7 @@ textarea {
     transform: rotateX(-90deg);
     transform-style: preserve-3d;
     transform-origin: top;
+    font-size: 2.5rem;
 }
 
 .container .box3:after {
@@ -495,8 +446,9 @@ textarea {
     cursor: none;
 }
 
-.pgContact textarea {
-    width: 90%;
+.mail {
+    position: relative;
+    width: 50%;
 }
 
 .pgContact input:hover {
@@ -504,7 +456,7 @@ textarea {
 }
 
 .pgContact textarea:hover {
-    box-shadow: 5px 5px 15px black;
+    box-shadow: 5px 5px 8px black;
 }
 
 .pgContact input:focus {
@@ -519,6 +471,39 @@ textarea {
     box-shadow: 5px 5px 8px black;
 }
 
+#subForm {
+    padding: 3px;
+    width: 100px;
+    margin-top: 30px;
+    border: 2px solid black;
+    border-radius: 0px;
+}
+
+.pgContact input,
+textarea {
+    font-family: "Magra";
+    font-size: 1.2rem;
+    margin: 6px 0;
+    padding: 3px;
+    border: none;
+}
+
+.pgContact input {
+    font-weight: bold;
+    border-radius: 12px;
+}
+
+form {
+    background-color: #ddebff;
+    border-radius: 5px;
+    padding: 25px;
+    margin: 15px 0 30px 0;
+    /* border: 3px solid black; */
+    box-shadow: 15px 15px 15px black;
+    max-width: 700px;
+    /* width: 90%; */
+}
+
 .contact {
     width: 100%;
     display: flex;
@@ -530,11 +515,28 @@ textarea {
     padding: 50px;
     text-align: center;
 }
+.center_div {
+    max-width: 700px;
+}
 
 .mail {
-    padding-left: 10%;
     width: 50%;
     padding: 50px;
+    text-align: center;
+}
+
+.mail .error {
+    color: red;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: left;
+}
+
+.mail .email_success {
+    color: green;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: left;
 }
 
 .numeros {
@@ -547,9 +549,15 @@ textarea {
     text-align: center;
     padding: 10px;
     margin: 15px auto;
-    border: 3px solid black;
+    /* border: 3px solid black; */
     box-shadow: 15px 15px 15px black;
     max-width: 400px;
+}
+
+.phone1,
+.phone2,
+.phone3 {
+    display: none;
 }
 
 .numeros p {
@@ -667,9 +675,116 @@ textarea {
     font-weight: bold;
 }
 
+/* Partie2 pageoffre */
+.part2 {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+}
+
+.affichScroll h2,
+.outils h2 {
+    font-family: "Magra";
+    font-size: 3rem;
+    padding: 20px 0 40px 0;
+    color: #eb017b;
+}
+
+.outils {
+    width: 30%;
+    padding: 30px;
+    margin: 40px;
+    background-color: #f7d987;
+}
+
+.outils li {
+    padding: 20px 0 20px 0;
+    margin-left: 15%;
+    list-style-type: square;
+    font-size: 1.2rem;
+    font-family: "Oxygen";
+    font-weight: bold;
+}
+.affichScroll li {
+    padding: 10px 0 10px 25%;
+    list-style: none;
+    font-size: 1.8rem;
+    font-family: "Oxygen";
+    font-weight: bold;
+}
+.affichScroll li::before {
+    content: "";
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    margin-right: 15px;
+    background-image: url("arrow-icon-1178.png");
+    background-size: 1.5rem;
+    background-repeat: no-repeat;
+}
+
+.affichScroll {
+    position: relative;
+    z-index: 0;
+    margin-top: 50px;
+    width: 70%;
+    opacity: 0;
+    transform: translateY(-100%);
+    letter-spacing: 2px;
+    /* background-color: #f7d987; */
+}
+
+.affichScroll.active {
+    animation-name: bounce, fadeIn;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(-100%);
+    }
+    60% {
+        transform: translateY(0%);
+    }
+    70% {
+        transform: translateY(-18px);
+    }
+    80% {
+        transform: translateY(13px);
+    }
+    85% {
+        transform: translateY(-9px);
+    }
+    90% {
+        transform: translateY(5px);
+    }
+    94% {
+        transform: translateY(-3px);
+    }
+    96% {
+        transform: translateY(2px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 /* slideshow */
 
-.slideshow-container {
+/* .slideshow-container {
     margin-top: 2vw;
     overflow: hidden;
     min-height: 60vmin;
@@ -731,7 +846,7 @@ textarea {
 .slide h2 {
     color: black;
     /* text-shadow: 0 0 5px rgba(0, 0, 0, 0.4); */
-    position: absolute;
+/* position: absolute;
     top: clamp(10px, 2vw, 20px);
     left: clamp(10px, 2vw, 20px);
     font-size: clamp(20px, 3vw, 40px);
@@ -744,7 +859,7 @@ textarea {
     padding-top: 50px;
     text-decoration: underline;
     text-align: center;
-}
+} */
 
 /* footer */
 footer {
@@ -780,6 +895,7 @@ footer {
     nav {
         color: black;
         padding-left: 15%;
+        z-index: 9;
     }
 
     .fond {
@@ -800,7 +916,6 @@ footer {
     #equip,
     .anim,
     .pgContact,
-    .galerie,
     .pgOffres h1 {
         color: white;
     }
@@ -865,11 +980,11 @@ footer {
         width: 100%;
         transform: translateY(-280px);
         transition: all 0.8s;
+        z-index: 8;
     }
 
     .navbar_lien.appnav2 {
         transform: translateY(280px);
-        z-index: 2;
         transition: all 1.5s;
     }
 
@@ -920,7 +1035,7 @@ footer {
         padding: 0;
         text-align: center;
     }
-    .galerie h1,
+
     .pgOffres h1 {
         font-size: 2.5rem;
     }
@@ -934,6 +1049,30 @@ footer {
         width: 100%;
         box-shadow: none;
     }
+
+    .contenant:hover .card {
+    transform: none;
+    box-shadow: none;
+}
+        
+    .part2 {
+        display: flex;
+        flex-direction: column;
+    }
+    .affichScroll.active {
+        width: auto;
+        margin: 10px;
+    }
+
+    .affichScroll.active li {
+        color: white;
+        padding: 10px 0 10px 15%;
+    }
+
+    .outils {
+        width: auto;
+    }
+
     /* page contact */
     .pgContact {
         padding: 20px;
@@ -941,9 +1080,6 @@ footer {
         width: 90%;
     }
 
-    form {
-        width: 100%;
-    }
     .pgContact textarea {
         width: 100%;
     }
@@ -979,20 +1115,20 @@ footer {
         text-align: left;
     }
 
+    .phone img {
+        filter: invert(100%);
+    }
+
     .mail {
         width: 100%;
         margin: auto;
         padding: 20px;
+        text-align: left;
     }
 
     .mail img {
         margin-left: 0;
-    }
-
-    .numeros {
-        font-size: 1.8rem;
-        opacity: 1;
-        margin: 15px 0;
+        filter: invert(100%);
     }
 
     #subForm {
@@ -1005,131 +1141,49 @@ footer {
 
 @media screen and (max-width: 600px) {
     .numeros .box1,
-    .box2,
-    .box3 {
-        margin: 10px auto;
-        border: 2px solid black;
+    .numeros .box2,
+    .numeros .box3 {
+        display: none;
+    }
+
+    .numeros .phone1,
+    .numeros .phone2,
+    .numeros .phone3 {
+        display: block;
+        background-color: #f7d987;
+        border: 3px solid black;
         box-shadow: inset 4px 4px 12px #645732;
         width: 95%;
+        color: black;
+        border-radius: 5px;
+        font-family: "Magra";
+        font-size: 1.6rem;
+        font-weight: bold;
+        text-align: center;
+        padding: 10px;
+        margin: 10px auto;
+        max-width: 400px;
     }
 
-    .numeros .container .box3 {
-        font-size: 1.4rem;
+    .affichScroll h2,
+    .outils h2 {
+        font-size: 2.5rem;
+        padding: 0;
     }
 
-    .container .box1:hover,
-    .box2:hover,
-    .box3:hover {
-        transform: inherit;
+    .outils {
+        margin: 20px;
     }
-}
 
-/* Partie2 pageoffre */
-.part2 {
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 30px;
-}
-
-.affichScroll h2, .outils h2 {
-    font-family: "Magra";
-    font-size: 3rem;
-    padding: 20px 0 40px 0;
-    color: #eb017b;
-}
-
-.outils {
-    width: 30%;
-    padding: 30px;
-    margin: 40px;
-    background-color: #f7d987;
-}
-
-
-.outils li {
-    
-    padding: 20px 0 20px 0;
-    margin-left: 15%;
-    list-style-type: square;
-    font-size: 1.2rem;
-    font-family: "Oxygen";
-    font-weight: bold;
-}
-.affichScroll li {
-    padding: 10px 0 10px 25%;
-    list-style: none;
-    font-size: 1.8rem;
-    font-family: "Oxygen";
-    font-weight: bold;
-}
-.affichScroll li::before {
-    content: "";
-    display: inline-block;
-    height: 20px;
-    width: 20px;
-    margin-right: 15px;
-    background-image: url("arrow-icon-1178.png");
-    background-size: 1.5rem;
-    background-repeat: no-repeat;
-}
-
-.affichScroll {
-    position: relative;
-    z-index: 0;
-    margin-top: 50px;
-    width: 70%;
-    opacity: 0;
-    transform: translateY(-100%);
-    letter-spacing: 2px;
-    /* background-color: #f7d987; */
-}
-
-.affichScroll.active {
-    animation-name: bounce, fadeIn;
-    animation-duration: 1.5s;
-    animation-fill-mode: forwards;
-}
-
-
-
-@keyframes bounce {
-    0% {
-        transform: translateY(-100%);
+    .outils li {
+        padding: 10px 10% 10px 0;
+        margin-left: 15%;
+        font-size: 1.2rem;
     }
-    60% {
-        transform: translateY(0%);
+    .affichScroll .ul {
+        width: 80%;
     }
-    70% {
-        transform: translateY(-18px);
-    }
-    80% {
-        transform: translateY(13px);
-    }
-    85% {
-        transform: translateY(-9px);
-    }
-    90% {
-        transform: translateY(5px);
-    }
-    94% {
-        transform: translateY(-3px);
-    }
-    96% {
-        transform: translateY(2px);
-    }
-    100% {
-        transform: translateY(0px);
-    }
-}
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    25% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
+    .affichScroll li {
+        font-size: 1.2rem;
     }
 }
