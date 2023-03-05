@@ -8,12 +8,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="stylesheet" type="text/css" href="Enea.css" />
 
+
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Magra&family=Oxygen&display=swap" rel="stylesheet" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="robots" content="noindex,nofollow">
+    <meta name="description" content="Découvrez nos offres pour le déploiement de réseaux de télécommunications, génie civil et fibre optique. 
+    Des solutions innovantes et sur mesure pour répondre à vos besoins. Contactez-nous pour en savoir plus.">
 
 </head>
 
@@ -38,7 +58,7 @@
                 <a href="realis.php">Nos réalisations</a>
                 <ul class="ssmenu">
                     <li><a href="realis.php">Cote d'Ivoire</a></li>
-                    <li><a href="realis.php">Burkina Faso</a></li>
+                    <li><a href="realis.php#BF">Burkina Faso</a></li>
                 </ul>
             </section>
             <section class="o2">
@@ -89,6 +109,10 @@
                         <p>Installation de RRH 3G et 4G</p>
                         <p>Installation d'antennes panneaux</p>
                         <p>Installation d'antennes FH et ODU's</p>
+                        <p>Mise en service FH</p>
+                        <p>Mise en service ADM</p>
+                        <p>Installation des répéteurs</p>
+                        <p>Installation de sites Indoor</p>
                     </div>
                 </div>
             </div>
@@ -105,6 +129,9 @@
                         <h3>Installation de fibre optique</h3>
                         <br />
                         <p>Maintenance de fibre optique</p>
+                        <p>Installation de FTTH</p>
+                        <p>Installation FTTX</p>
+
                     </div>
                 </div>
             </div>
@@ -116,11 +143,11 @@
                     </div>
 
                     <div class="back">
-                        <h3>Maintenance de pylônes</h3>
+
                         <br />
-                        <p>Mise en service FH</p>
-                        <p>Mise en service ADM</p>
-                        <p>Installation des répéteurs</p>
+                        <p>Maintenance d'infrastructures (Pylônes)</p><br />
+                        <p>Maintenance de Groupes Electrogènes</p><br />
+                        <p>Maintenance de panneaux solaires</p>
                     </div>
                 </div>
             </div>
@@ -139,7 +166,7 @@
                         <br />
                         <p>
                             <img src="generator.png" alt="generatorElec" />
-                            Fourniture et Maintenance de groupe électrogène
+                            Fourniture et Maintenance de groupes électrogènes
                         </p>
                         <br />
                         <p>
@@ -157,6 +184,7 @@
             <h2>Valeur ajoutée</h2>
             <br />
             <ul>
+                <li>Audit technique</li>
                 <li>Audit de performance</li>
                 <li>Audit de benchmarking</li>
                 <li>Site vérifié par drone - Infrastructure</li>
@@ -164,10 +192,10 @@
                 <li>Reporting Drive Test</li>
                 <li>Développement intégration et optimisation</li>
                 <li>Formation</li>
-                <li>Audit technique</li>
+
             </ul>
         </div>
-        <div class="outils">
+        <!-- <div class="outils">
             <h2>Des outils innovants</h2>
             <br />
             <ul>
@@ -178,9 +206,31 @@
                 <li>Mesure de qualité d'expérience en Crowdsourcing</li>
                 <li>Dosimètres CEM / Simulateurs CEM</li>
             </ul>
-        </div>
+        </div> -->
     </div>
-    <footer></footer>
+    <footer>
+        <div class="descript">
+            <a href="index.php">Enea Teleco<span class="lettrem">m</span></a>
+            <p>Votre partenaire pour vos&nbsp;réseaux de&nbsp;télécommunications!</p>
+        </div>
+        <div class=" menu3">
+            <a href="index.php">Notre société</a>
+            <a href="offres.php">Nos offres</a>
+            <a href="realis.php">Nos réalisations</a>
+        </div>
+        <div class="divers">
+
+            <div class="appelcontact">
+                <p>Vous avez un projet de déploiement de&nbsp;réseau?</p>
+                <a href="contact.php" class="btncontact">Contactez-nous!</a>
+            </div>
+            <div class="copyinfo">
+                <p> ©2022- Site codé par L-FÈJ-P</p>
+                <p>"Tous droits réservés"</p>
+            </div>
+        </div>
+
+    </footer>
     <script src="enea.js"></script>
     <script>
     const valAjout = document.querySelector(".affichScroll");

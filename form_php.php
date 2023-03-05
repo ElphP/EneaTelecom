@@ -1,16 +1,17 @@
  <?php 
  
     $name_error = $mail_error= $mess_error = $website_error = "";
-    $name = $mail = $objet = $message = $mess_ok = $contenu =  "";
+    $name = $mail = $objet = $message = $mess_ok = $contenu =  $website= "";
   if(isset($_POST['submit'])) {
        
     if($_SERVER["REQUEST_METHOD"] == "POST") {
 
             if ($_POST["website"] != "")  {
                 unset($_POST["submit"]);
-                $mailTo = "elphege78@gmail.com";
+                $_POST["website"] = "";
+                $mailTo = "sylviedji@eneatelecom.com";
                 $subject = "Message du site EneaTelecom";
-                $contenu =  "Une tentative de spam a été déjoué par le site! (Me contacter si cela arrive trop souvent...)";
+                $contenu =  "Une tentative de spam a été déjoué par le site. (Contacter le webmaster si cela arrive trop souvent...)";
                 if(mail($mailTo,$subject,$contenu)){
                 $name = $mail = $objet = $message = "";
                 header("Location: pageRobot.php"); 
@@ -55,7 +56,7 @@
 
             if($name_error == "" and $mail_error == "" and $mess_error == "")  {
                 unset($_POST["submit"]);
-                $mailTo = "elphege78@gmail.com";
+                $mailTo = "sylviedji@eneatelecom.com";
                 $subject = "Message du site EneaTelecom";
                 $contenu =  "Ce message a été envoyé automatiquement depuis le formulaire du site EneaTelecom.\n\n Contact : ".$name.
                 "\n Adresse e-mail: ".$mail. "\n Objet du message: ".$objet. "\n\n" .$message. "\n"; 

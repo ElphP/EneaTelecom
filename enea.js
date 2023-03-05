@@ -32,7 +32,7 @@ function ToggleCard() {
 }
 ToggleCard();
 
-// pot de miel
+
 function changeStyleForm() {
 document.getElementById("website").style.display = "none";
 }

@@ -1,0 +1,6 @@
+User-Agent: *
+Allow: /
+Disallow: /pageRobot.php
+Disallow: /form_php.php
+
+Sitemap: https://eneatelecom.com/sitemap.xml
